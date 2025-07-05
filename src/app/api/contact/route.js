@@ -23,8 +23,8 @@ export async function POST(request) {
     }
 
     // Check if environment variables are set
-    const emailUser = process.env.EMAIL_USER ;
-    const emailPass = process.env.EMAIL_PASS ;
+    const emailUser = process.env.EMAIL_USER || "zaynobusiness@gmail.com" ;
+    const emailPass = process.env.EMAIL_PASS || "edem guoz gter rhwy";
 
     console.log('EMAIL_USER:', emailUser);
     console.log('EMAIL_PASS:', emailPass ? '***' : 'NOT SET');
