@@ -57,8 +57,8 @@ export default function About() {
       ref={aboutRef}
       className="py-20 px-4 sm:px-6 lg:px-8 min-h-screen bg-[#F9FAFB] flex items-center"
     >
-      <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-12">
-        <div ref={imageRef} className="md:w-1/2 flex justify-center">
+      <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+        <div ref={imageRef} className="md:w-1/2 flex justify-center mb-8 md:mb-0">
           <img
             src="./images/jasmin.jpg"
             alt="Portrait of Jasmin"
