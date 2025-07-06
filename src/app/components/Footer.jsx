@@ -22,7 +22,7 @@ const Footer = () => {
   };
 
   const footerLinks = [
-    { href: '/impressum', label: 'Impressum' },
+    // { href: '/impressum', label: 'Impressum' },
     { href: '/datenschutz', label: 'Datenschutzerklärung' },
     { href: '/agb', label: 'AGB' },
     { href: '/kontakt', label: 'Kontakt' }
