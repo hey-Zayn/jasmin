@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@sendgrid/mail": "^8.1.5",
     "next": "15.3.4",
     "nodemailer": "^7.0.4",

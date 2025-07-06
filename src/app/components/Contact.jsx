@@ -1,7 +1,9 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useLayoutEffect, useRef } from 'react'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +13,70 @@ const Contact = () => {
     message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const sectionRef = useRef()
+  const headingRef = useRef()
+  const subheadingRef = useRef()
+  const contactCardsRef = useRef([])
+  contactCardsRef.current = []
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+
+    // Set initial state
+    gsap.set([headingRef.current, subheadingRef.current], {
+      y: 20,
+      opacity: 0
+    })
+    
+    gsap.set(contactCardsRef.current, {
+      y: 30,
+      opacity: 0,
+      scale: 0.95
+    })
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 80%",
+        end: "top 30%",
+        toggleActions: "play none none none",
+        markers: false
+      }
+    })
+
+    tl.to(headingRef.current, {
+      y: 0,
+      opacity: 1,
+      duration: 0.8,
+      ease: "power3.out"
+    })
+    .to(subheadingRef.current, {
+      y: 0,
+      opacity: 1,
+      duration: 0.6,
+      ease: "power3.out"
+    }, "-=0.4")
+    .to(contactCardsRef.current, {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      duration: 0.7,
+      stagger: 0.15,
+      ease: "back.out(1.4)"
+    }, "-=0.3")
+
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
+      tl.kill()
+    }
+  }, [])
+
+  const addToContactRefs = (el) => {
+    if (el && !contactCardsRef.current.includes(el)) {
+      contactCardsRef.current.push(el)
+    }
+  }
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -55,20 +121,20 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="bg-[#F9FAFB] py-20 px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="bg-[#F9FAFB] py-20 px-4 sm:px-6 lg:px-8" ref={sectionRef}>
       <ToastContainer position="top-right" />
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-[#000430] mb-4">
+          <h2 ref={headingRef} className="text-4xl md:text-5xl lg:text-6xl font-light text-[#000430] mb-4">
             Kontaktieren Sie uns
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p ref={subheadingRef} className="text-xl text-gray-600 max-w-2xl mx-auto">
             Wir freuen uns darauf, von Ihnen zu hören
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="space-y-6">
+          <div ref={addToContactRefs} className="space-y-6">
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-semibold text-[#000430] mb-6">Kontaktinformation</h3>
               <div className="space-y-4">
@@ -80,7 +146,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-700">Adresse</h4>
-                    <p className="text-gray-600">Musterstraße 123, 10115 Berlin</p>
+                    <p className="text-gray-600">Coulinstraße 24, 4020 Linz, Österreich</p>
                   </div>
                 </div>
 
@@ -91,8 +157,9 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-700">Telefon</h4>
-                    <p className="text-gray-600">+49 30 12345678</p>
+                    <h4 className="font-medium text-gray-700">Firmendaten</h4>
+                    <p className="text-gray-600">HINEDI UNLIMITED, Inhaberin: Jasmin Hinedi</p>
+                    <p className="text-gray-600">Mitglied der WKO, Firmengericht: LG Linz</p>
                   </div>
                 </div>
 
@@ -105,14 +172,14 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-700">Email</h4>
-                    <p className="text-gray-600">kontakt@beispiel.de</p>
+                    <p className="text-gray-600">contact@hinediunlimited.com</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-white p-8 rounded-2xl shadow-lg">
+          <div ref={addToContactRefs} className="bg-white p-8 rounded-2xl shadow-lg">
             <h3 className="text-2xl font-semibold text-[#000430] mb-6">Schreiben Sie uns</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
