@@ -116,10 +116,10 @@ export default function Navbar() {
                 {/* Desktop Layout */}
                 <div className="hidden md:flex flex-col items-center">
                     <div className="flex flex-col items-center">
-                        <Link href="/" ref={logoRef} className="h-20 w-28 relative cursor-pointer mb-2">
+                        <Link href="/" ref={logoRef} className="h-20 w-76 relative cursor-pointer mb-2">
                             <Image 
-                                src="/images/jasmin-logo.png" 
-                                alt="Jasmin Logo"
+                                src="/images/logo-main.png" 
+                                alt=" Logo"
                                 fill
                                 className="object-contain hover:scale-105 transition-transform duration-300"
                                 priority
@@ -132,7 +132,7 @@ export default function Navbar() {
                     <nav className="w-full">
                         <ul className="flex justify-between w-full max-w-4xl mx-auto">
                             {navItems.map((item, index) => (
-                                <li key={item.id} className="flex-1 text-center">
+                                <li key={item.id} className="flex-1 font-bold text-center">
                                     <button 
                                         ref={el => navItemsRef.current[index] = el}
                                         onClick={() => scrollToSection(item.id)} 

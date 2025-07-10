@@ -107,12 +107,13 @@ const Services = () => {
               <p className="text-gray-700 leading-relaxed flex-grow">
                 {service.description}
               </p>
+              <a href="https://calendly.com/contact-hinediunlimited/30min">
               <button
                 className="bg-[#000430] text-white text-lg px-6 py-3 rounded-full transition-all duration-300 ease-in-out hover:bg-[#1a1d6c] hover:shadow-[0_10px_25px_-5px_rgba(0,4,48,0.4)] hover:-translate-y-1 active:translate-y-0 active:shadow-[0_5px_15px_-3px_rgba(0,4,48,0.3)] transform hover:scale-105 active:scale-100 mt-6"
               >
                 Exklusive Beratung buchen
               </button>
-              
+              </a>
             </div>
           ))}
         </div>
