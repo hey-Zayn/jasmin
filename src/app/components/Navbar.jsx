@@ -116,7 +116,7 @@ export default function Navbar() {
                 {/* Desktop Layout */}
                 <div className="hidden md:flex flex-col items-center">
                     <div className="flex flex-col items-center">
-                        <Link href="/" ref={logoRef} className="h-20 w-76 relative cursor-pointer mb-2">
+                        <a href="/" ref={logoRef} className="h-20 w-76 relative cursor-pointer mb-2">
                             <Image 
                                 src="/images/logo-main.png" 
                                 alt=" Logo"
@@ -125,7 +125,7 @@ export default function Navbar() {
                                 priority
                                 quality={100}
                             />
-                        </Link>
+                        </a>
                         <h1 ref={titleRef} className="text-6xl font-light text-gray-900 mb-6 tracking-wider">HINEDI UNLIMITED</h1>
                     </div>
                     <div className="w-full max-w-4xl border-t border-gray-200 my-1"></div>
