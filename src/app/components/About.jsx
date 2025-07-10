@@ -80,11 +80,11 @@ export default function About() {
           >
             Unser Team kennenlernen
           </button> */}
-           <button
+           {/* <button
             ref={aboutbtnRef} 
            className="bg-[#000430] text-white text-base sm:text-lg md:text-xl px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 ease-in-out hover:bg-[#1a1d6c] hover:shadow-[0_10px_25px_-5px_rgba(0,4,48,0.4)] hover:-translate-y-1 active:translate-y-0 active:shadow-[0_5px_15px_-3px_rgba(0,4,48,0.3)] transform hover:scale-105 active:scale-100">
               Unser Team kennenlernen
-            </button>
+            </button> */}
         </div>
       </div>
     </section>

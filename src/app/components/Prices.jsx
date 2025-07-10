@@ -136,48 +136,7 @@ const Prices = () => {
           </div>
 
           
-          {/* Premium Package - Highlighted */}
-          <div 
-            ref={addToCardRefs}
-            className="bg-[#000430] p-8 rounded-2xl shadow-2xl transition-all duration-300 border-2 border-white flex flex-col h-full transform hover:-translate-y-2 relative group overflow-hidden hover:shadow-[0_15px_40px_-10px_rgba(255,255,255,0.2)] scale-105 -mt-2"
-          >
-            
-            <div className="flex flex-col h-full">
-              <h3 className="text-2xl font-semibold text-white mb-2">Premium</h3>
-              <p className="text-3xl font-bold text-white mb-6">
-                999€ <span className="text-lg font-normal text-blue-100">/Monat</span>
-              </p>
-              <ul className="text-blue-100 space-y-3 mb-8 flex-grow">
-                <li className="flex items-center">
-                  <span className="w-5 h-5 bg-white rounded-full mr-3 flex items-center justify-center text-blue-600 text-xs">✓</span>
-                  20 Beiträge
-                </li>
-                <li className="flex items-center">
-                  <span className="w-5 h-5 bg-white rounded-full mr-3 flex items-center justify-center text-blue-600 text-xs">✓</span>
-                  10 Reels
-                </li>
-                <li className="flex items-center">
-                  <span className="w-5 h-5 bg-white rounded-full mr-3 flex items-center justify-center text-blue-600 text-xs">✓</span>
-                  Texte & Hashtags
-                </li>
-                <li className="flex items-center">
-                  <span className="w-5 h-5 bg-white rounded-full mr-3 flex items-center justify-center text-blue-600 text-xs">✓</span>
-                  4 Werbetexte
-                </li>
-                <li className="flex items-center">
-                  <span className="w-5 h-5 bg-white rounded-full mr-3 flex items-center justify-center text-blue-600 text-xs">✓</span>
-                  KI-Optimierung
-                </li>
-                <li className="flex items-center">
-                  <span className="w-5 h-5 bg-white rounded-full mr-3 flex items-center justify-center text-blue-600 text-xs">✓</span>
-                  2 Coaching-Sitzungen
-                </li>
-              </ul>
-            </div>
-            <button className="bg-gradient-to-r from-white to-blue-100 hover:from-blue-100 hover:to-white text-[#000430] px-6 py-3 rounded-full text-lg transition-all w-full hover:scale-[1.02] shadow-[0_4px_14px_-4px_rgba(255,255,255,0.3)] hover:shadow-[0_8px_18px_-6px_rgba(255,255,255,0.4)]">
-              Jetzt starten
-            </button>
-          </div>
+        
           
           
           {/* Pro Package */}
@@ -222,6 +181,48 @@ const Prices = () => {
             </button>
           </div>
 
+            {/* Premium Package - Highlighted */}
+            <div 
+            ref={addToCardRefs}
+            className="bg-[#000430] p-8 rounded-2xl shadow-2xl transition-all duration-300 border-2 border-white flex flex-col h-full transform hover:-translate-y-2 relative group overflow-hidden hover:shadow-[0_15px_40px_-10px_rgba(255,255,255,0.2)] scale-105 -mt-2"
+          >
+            
+            <div className="flex flex-col h-full">
+              <h3 className="text-2xl font-semibold text-white mb-2">Premium</h3>
+              <p className="text-3xl font-bold text-white mb-6">
+                999€ <span className="text-lg font-normal text-blue-100">/Monat</span>
+              </p>
+              <ul className="text-blue-100 space-y-3 mb-8 flex-grow">
+                <li className="flex items-center">
+                  <span className="w-5 h-5 bg-white rounded-full mr-3 flex items-center justify-center text-blue-600 text-xs">✓</span>
+                  20 Beiträge
+                </li>
+                <li className="flex items-center">
+                  <span className="w-5 h-5 bg-white rounded-full mr-3 flex items-center justify-center text-blue-600 text-xs">✓</span>
+                  10 Reels
+                </li>
+                <li className="flex items-center">
+                  <span className="w-5 h-5 bg-white rounded-full mr-3 flex items-center justify-center text-blue-600 text-xs">✓</span>
+                  Texte & Hashtags
+                </li>
+                <li className="flex items-center">
+                  <span className="w-5 h-5 bg-white rounded-full mr-3 flex items-center justify-center text-blue-600 text-xs">✓</span>
+                  4 Werbetexte
+                </li>
+                <li className="flex items-center">
+                  <span className="w-5 h-5 bg-white rounded-full mr-3 flex items-center justify-center text-blue-600 text-xs">✓</span>
+                  KI-Optimierung
+                </li>
+                <li className="flex items-center">
+                  <span className="w-5 h-5 bg-white rounded-full mr-3 flex items-center justify-center text-blue-600 text-xs">✓</span>
+                  2 Coaching-Sitzungen
+                </li>
+              </ul>
+            </div>
+            <button className="bg-gradient-to-r from-white to-blue-100 hover:from-blue-100 hover:to-white text-[#000430] px-6 py-3 rounded-full text-lg transition-all w-full hover:scale-[1.02] shadow-[0_4px_14px_-4px_rgba(255,255,255,0.3)] hover:shadow-[0_8px_18px_-6px_rgba(255,255,255,0.4)]">
+              Jetzt starten
+            </button>
+          </div>
           
         </div>
       </div>
