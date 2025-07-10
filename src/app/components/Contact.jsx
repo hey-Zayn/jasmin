@@ -144,7 +144,7 @@ const Contact = () => {
             <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#000430]/20">
               <h3 className="text-2xl font-semibold text-[#000430] mb-6">Kontaktinformation</h3>
               <div className="space-y-4">
-                <div className="flex items-start">
+                {/* <div className="flex items-start">
                   <div className="w-10 h-10 bg-[#000430] rounded-full flex items-center justify-center text-white mr-4">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
@@ -154,7 +154,7 @@ const Contact = () => {
                     <h4 className="font-medium text-gray-700">Adresse</h4>
                     <p className="text-gray-600">Coulinstraße 24, 4020 Linz, Österreich</p>
                   </div>
-                </div>
+                </div> */}
 
                 {/* <div className="flex items-start ">
                   <div className="w-10 h-10 bg[#000430] rounded-full flex items-center justify-center text-white mr-4">
