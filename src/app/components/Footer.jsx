@@ -29,7 +29,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-gray-50 to-gray-100 py-8 px-4 border-t border-gray-200">
+    <footer className="bg-[#f9f5f0] py-8 px-4 border-t border-gray-200">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-wrap justify-center gap-8 mb-8">
           {footerLinks.map((link) => (
@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
         
         <p className="text-center text-gray-400 text-xs mb-2">
-          © {new Date().getFullYear()} Company Name. All rights reserved.
+          © {new Date().getFullYear()} HINEDI UNLIMITED. All rights reserved.
         </p>
 
         {showCookieBanner && (

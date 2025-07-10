@@ -7,7 +7,7 @@ import Contact from './components/Contact'
 
 const page = () => {
   return (
-    <div className='bg-[#F9FAFB] overflow-hidden container mx-auto px-4 sm:px-6 lg:px-8'>
+    <div className='bg-[#f9f5f0] overflow-hidden container mx-auto px-4 sm:px-6 lg:px-8'>
 
       <Hero />
       <About />

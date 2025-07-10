@@ -55,7 +55,7 @@ export default function About() {
     <section
       id="about"
       ref={aboutRef}
-      className="py-20 px-4 sm:px-6 lg:px-8 min-h-screen bg-[#F9FAFB] flex items-center"
+      className="py-20 px-4 sm:px-6 lg:px-8 min-h-screen bg-[#f9f5f0] flex items-center"
     >
       <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
         <div ref={imageRef} className="md:w-1/2 flex justify-center mb-8 md:mb-0">
@@ -74,12 +74,17 @@ export default function About() {
             Unsere Mission ist es, visionäre Unternehmer auf ihrem Weg zu
             außergewöhnlichem Erfolg und nachhaltigem Wachstum zu begleiten.
           </p>
-          <button 
+          {/* <button 
             ref={aboutbtnRef} 
             className="bg-[#000430] text-white px-6 py-3 rounded-lg text-lg hover:bg-opacity-90 transition-all hover:shadow-lg"
           >
             Unser Team kennenlernen
-          </button>
+          </button> */}
+           <button
+            ref={aboutbtnRef} 
+           className="bg-[#000430] text-white text-base sm:text-lg md:text-xl px-8 sm:px-10 py-3 sm:py-4 rounded-full transition-all duration-300 ease-in-out hover:bg-[#1a1d6c] hover:shadow-[0_10px_25px_-5px_rgba(0,4,48,0.4)] hover:-translate-y-1 active:translate-y-0 active:shadow-[0_5px_15px_-3px_rgba(0,4,48,0.3)] transform hover:scale-105 active:scale-100">
+              Unser Team kennenlernen
+            </button>
         </div>
       </div>
     </section>
