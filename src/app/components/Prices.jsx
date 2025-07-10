@@ -130,9 +130,11 @@ const Prices = () => {
                 </li>
               </ul>
             </div>
+            <a href="https://calendly.com/contact-hinediunlimited/30min">
             <button className="bg-gradient-to-r from-[#000430] to-[#1a1d6c] hover:from-[#1a1d6c] hover:to-[#000430] text-white px-6 py-3 rounded-full text-lg transition-all w-full hover:scale-[1.02] shadow-[0_4px_14px_-4px_rgba(0,4,48,0.3)] hover:shadow-[0_8px_18px_-6px_rgba(0,4,48,0.4)]">
               Jetzt starten
             </button>
+            </a>
           </div>
 
           
@@ -176,9 +178,11 @@ const Prices = () => {
                 </li>
               </ul>
             </div>
+            <a href="https://calendly.com/contact-hinediunlimited/30min">
             <button className="bg-gradient-to-r from-[#000430] to-[#1a1d6c] hover:from-[#1a1d6c] hover:to-[#000430] text-white px-6 py-3 rounded-full text-lg transition-all w-full hover:scale-[1.02] shadow-[0_4px_14px_-4px_rgba(0,4,48,0.3)] hover:shadow-[0_8px_18px_-6px_rgba(0,4,48,0.4)]">
               Jetzt starten
             </button>
+            </a>
           </div>
 
             {/* Premium Package - Highlighted */}
@@ -219,9 +223,11 @@ const Prices = () => {
                 </li>
               </ul>
             </div>
+            <a href="https://calendly.com/contact-hinediunlimited/30min">
             <button className="bg-gradient-to-r from-white to-blue-100 hover:from-blue-100 hover:to-white text-[#000430] px-6 py-3 rounded-full text-lg transition-all w-full hover:scale-[1.02] shadow-[0_4px_14px_-4px_rgba(255,255,255,0.3)] hover:shadow-[0_8px_18px_-6px_rgba(255,255,255,0.4)]">
               Jetzt starten
             </button>
+            </a>
           </div>
           
         </div>
