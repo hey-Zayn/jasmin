@@ -185,59 +185,59 @@ const Contact = () => {
             </div>
           </div>
 
-          <div ref={addToContactRefs} className="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#000430]/20">
-            <h3 className="text-2xl font-semibold text-[#000430] mb-6">Schreiben Sie uns</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div ref={addToContactRefs} className="bg-white p-6 rounded-2xl shadow-lg border border-[#000430]/20">
+            <h3 className="text-xl font-medium text-[#000430] mb-4">Schreiben Sie uns</h3>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                  <label htmlFor="name" className="block text-xs font-semibold text-gray-600 mb-1">Name</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000430] focus:border-[#000430] transition-all"
+                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-1 focus:ring-[#000430] focus:border-[#000430] transition-all"
                     placeholder="Ihr Name"
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                  <label htmlFor="email" className="block text-xs font-semibold text-gray-600 mb-1">Email</label>
                   <input
                     type="email"
                     id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000430] focus:border-[#000430] transition-all"
+                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-1 focus:ring-[#000430] focus:border-[#000430] transition-all"
                     placeholder="Ihre Email"
                     required
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Betreff</label>
+                <label htmlFor="subject" className="block text-xs font-semibold text-gray-600 mb-1">Betreff</label>
                 <input
                   type="text"
                   id="subject"
                   name="subject"
                   value={formData.subject}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000430] focus:border-[#000430] transition-all"
+                  className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-1 focus:ring-[#000430] focus:border-[#000430] transition-all"
                   placeholder="Betreff"
                   required
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Nachricht</label>
+                <label htmlFor="message" className="block text-xs font-semibold text-gray-600 mb-1">Nachricht</label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
-                  rows="5"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000430] focus:border-[#000430] transition-all"
+                  rows="4"
+                  className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-1 focus:ring-[#000430] focus:border-[#000430] transition-all"
                   placeholder="Ihre Nachricht"
                   required
                 ></textarea>
@@ -245,7 +245,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#000430] text-white text-lg px-6 py-3 rounded-full transition-all duration-300 ease-in-out hover:bg-[#1a1d6c] hover:shadow-[0_10px_25px_-5px_rgba(0,4,48,0.4)] hover:-translate-y-1 active:translate-y-0 active:shadow-[0_5px_15px_-3px_rgba(0,4,48,0.3)] transform hover:scale-105 active:scale-100 disabled:bg-gray-400 disabled:transform-none disabled:hover:shadow-none"
+                className="w-full bg-[#000430] text-white text-sm px-4 py-2 rounded-full transition-all duration-200 ease-in-out hover:bg-[#1a1d6c] hover:shadow-[0_5px_15px_-3px_rgba(0,4,48,0.3)] hover:-translate-y-0.5 active:translate-y-0 active:shadow-[0_2px_8px_-1px_rgba(0,4,48,0.2)] transform hover:scale-[1.02] active:scale-100 disabled:bg-gray-400 disabled:transform-none disabled:hover:shadow-none"
               >
                 {isSubmitting ? 'Wird gesendet...' : 'Nachricht senden'}
               </button>
