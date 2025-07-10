@@ -81,7 +81,7 @@ const Services = () => {
     <div 
       id="services" 
       ref={sectionRef}
-      className="min-h-screen bg-[#F9FAFB] flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
+      className="min-h-screen bg-[#f9f5f0] flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
     >
       <div 
         ref={containerRef}
@@ -99,7 +99,7 @@ const Services = () => {
             <div 
               key={index}
               ref={addToRefs}
-              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col transform hover:-translate-y-3 will-change-transform"
+              className="bg-white p-8 border-2 border-[#000430]/20 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col transform hover:-translate-y-3 will-change-transform"
             >
               <h3 className="text-2xl font-medium text-[#000430] mb-4">
                 {service.title}
@@ -107,18 +107,19 @@ const Services = () => {
               <p className="text-gray-700 leading-relaxed flex-grow">
                 {service.description}
               </p>
-              <button 
-                className="mt-6 bg-[#000430] text-white px-6 py-3 rounded-lg text-lg hover:bg-opacity-90 transition-all hover:shadow-md transform hover:scale-105 will-change-transform"
+              <button
+                className="bg-[#000430] text-white text-lg px-6 py-3 rounded-full transition-all duration-300 ease-in-out hover:bg-[#1a1d6c] hover:shadow-[0_10px_25px_-5px_rgba(0,4,48,0.4)] hover:-translate-y-1 active:translate-y-0 active:shadow-[0_5px_15px_-3px_rgba(0,4,48,0.3)] transform hover:scale-105 active:scale-100 mt-6"
               >
-                Demo buchen
+                Exklusive Beratung buchen
               </button>
+              
             </div>
           ))}
         </div>
 
         {/* Decorative background elements */}
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-[#d4af37] opacity-5 mix-blend-multiply blur-3xl"></div>
-        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-[#000430] opacity-5 mix-blend-multiply blur-3xl"></div>
+        {/* <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-[#d4af37] opacity-5 mix-blend-multiply blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-[#000430] opacity-5 mix-blend-multiply blur-3xl"></div> */}
       </div>
     </div>
   );

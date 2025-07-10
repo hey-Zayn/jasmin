@@ -13,6 +13,7 @@ const Contact = () => {
     message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const sectionRef = useRef()
   const headingRef = useRef()
@@ -84,6 +85,10 @@ const Contact = () => {
       ...prev,
       [name]: value
     }))
+    // Reset submitted state when user starts typing again
+    if (isSubmitted) {
+      setIsSubmitted(false)
+    }
   }
 
   const handleSubmit = async (e) => {
@@ -109,6 +114,7 @@ const Contact = () => {
           subject: '',
           message: ''
         })
+        setIsSubmitted(true)
       } else {
         toast.error(data.error || 'Fehler beim Senden der Nachricht')
       }
@@ -121,7 +127,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="bg-[#F9FAFB] py-20 px-4 sm:px-6 lg:px-8" ref={sectionRef}>
+    <section id="contact" className="bg-[#f9f5f0] py-20 px-4 sm:px-6 lg:px-8" ref={sectionRef}>
       <ToastContainer position="top-right" />
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -133,9 +139,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div ref={addToContactRefs} className="space-y-6">
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 ">
+          <div ref={addToContactRefs} className="space-y-6 ">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#000430]/20">
               <h3 className="text-2xl font-semibold text-[#000430] mb-6">Kontaktinformation</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -150,8 +156,8 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <div className="w-10 h-10 bg-[#000430] rounded-full flex items-center justify-center text-white mr-4">
+                {/* <div className="flex items-start ">
+                  <div className="w-10 h-10 bg[#000430] rounded-full flex items-center justify-center text-white mr-4">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
@@ -161,7 +167,7 @@ const Contact = () => {
                     <p className="text-gray-600">HINEDI UNLIMITED, Inhaberin: Jasmin Hinedi</p>
                     <p className="text-gray-600">Mitglied der WKO, Firmengericht: LG Linz</p>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start">
                   <div className="w-10 h-10 bg-[#000430] rounded-full flex items-center justify-center text-white mr-4">
@@ -179,7 +185,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div ref={addToContactRefs} className="bg-white p-8 rounded-2xl shadow-lg">
+          <div ref={addToContactRefs} className="bg-white p-8 rounded-2xl shadow-lg border-2 border-[#000430]/20">
             <h3 className="text-2xl font-semibold text-[#000430] mb-6">Schreiben Sie uns</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -239,7 +245,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-[#000430] hover:bg-[#1a1a4a] disabled:bg-gray-400 text-white px-6 py-3 rounded-lg text-lg transition-all"
+                className="w-full bg-[#000430] text-white text-lg px-6 py-3 rounded-full transition-all duration-300 ease-in-out hover:bg-[#1a1d6c] hover:shadow-[0_10px_25px_-5px_rgba(0,4,48,0.4)] hover:-translate-y-1 active:translate-y-0 active:shadow-[0_5px_15px_-3px_rgba(0,4,48,0.3)] transform hover:scale-105 active:scale-100 disabled:bg-gray-400 disabled:transform-none disabled:hover:shadow-none"
               >
                 {isSubmitting ? 'Wird gesendet...' : 'Nachricht senden'}
               </button>
